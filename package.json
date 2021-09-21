@@ -1,0 +1,23 @@
+{
+    "name": "livepush-cli",
+    "version": "0.0.0",
+    "description": "CLI frontend for livepush",
+    "scripts": {
+        "test": "npm run build",
+        "build": "tsc --project ."
+    },
+    "author": "Carol Schulze <carol@balena.io>",
+    "dependencies": {
+        "commander": "^8.2.0",
+        "docker-compose": "^0.23.13",
+        "dockerode": "^3.3.1",
+        "livepush": "^3.5.1",
+        "yaml": "^1.10.2"
+    },
+    "devDependencies": {
+        "@tsconfig/node12": "^1.0.9",
+        "@types/dockerode": "^3.2.7",
+        "@types/node": "^16.9.2",
+        "typescript": "^4.4.3"
+    }
+}
