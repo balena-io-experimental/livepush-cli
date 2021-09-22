@@ -1,6 +1,6 @@
 {
     "name": "livepush-cli",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "CLI frontend for livepush",
     "scripts": {
         "test": "npm run build",
@@ -8,10 +8,13 @@
     },
     "author": "Carol Schulze <carol@balena.io>",
     "dependencies": {
+        "@balena/dockerignore": "^1.0.2",
+        "@types/tar-fs": "^2.0.1",
         "commander": "^8.2.0",
         "docker-compose": "^0.23.13",
         "dockerode": "^3.3.1",
         "livepush": "^3.5.1",
+        "tar-fs": "^2.1.1",
         "yaml": "^1.10.2"
     },
     "devDependencies": {
