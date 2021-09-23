@@ -115,15 +115,15 @@ export class Project {
     }
 
     public async initLivepush(docker: Docker) {
-        for (const service of this.services) {
-            await service.initLivepush(docker);
-        }
+        await Promise.all(this.services.map((service) => {
+            return service.initLivepush(docker);
+        }));
     }
 
     public async notifyChanges(filePaths: string[]) {
-        for (const service of this.services) {
-            await service.notifyChanges(filePaths);
-        }
+        await Promise.all(this.services.map((service) => {
+            return service.notifyChanges(filePaths);
+        }));
     }
 
     public async livepushBuildConfigurations(): Promise<LivepushBuildConfiguration[]> {
